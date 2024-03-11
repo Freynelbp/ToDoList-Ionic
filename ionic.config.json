@@ -1,0 +1,7 @@
+{
+  "name": "IonicToDoListNgModules",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
