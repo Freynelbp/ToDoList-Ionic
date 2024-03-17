@@ -33,11 +33,14 @@
     </ion-card-content>
 
     <ion-row>
-    
+      <ion-item button (click)="Eliminar(item.key)" >
+        <ion-icon name="checkmark-outline"></ion-icon>
+        <p style="color: rgb(0, 110, 255); font-weight: bold;">Completar</p>
+      </ion-item>
 
       <ion-item button (click)="Actualizar(item)">
         <ion-icon name="create-outline"></ion-icon>
-        <p style="color: rgb(71, 83, 255); font-weight: bold;">Actualizar</p>
+        <p style="color: rgb(0, 228, 102); font-weight: bold;">Actualizar</p>
       </ion-item>
 
       <ion-item button (click)="Eliminar(item.key)" >
