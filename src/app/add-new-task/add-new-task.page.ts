@@ -1,4 +1,3 @@
-import { IfStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { TodoService } from '../todo.service';
@@ -26,6 +25,8 @@ export class AddNewTaskPage implements OnInit {
   ngOnInit() {
     this.categories.push('Trabajo')
     this.categories.push('Personal')
+    this.categories.push('Diversion')
+    this.categories.push('Fecha Importante')
   }
   
   async Anadir(){
@@ -36,7 +37,7 @@ export class AddNewTaskPage implements OnInit {
     if(uid){
       await this.todoService.addTask(uid,this.newTaskObj)
     }else{
-      console.log("can't save empty task");
+      alert("No se pudo añadir la tarea")
     }
 
 

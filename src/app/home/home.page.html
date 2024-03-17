@@ -15,21 +15,21 @@
     <ion-card-header>
       
      <!-- <ion-card-subtitle [style.color]="item.value.itemPriority === 'Alta' ? 'red' : (item.value.itemPriority === 'Baja' ? 'green' : 'orange')">-->
-      <ion-card-subtitle style="color: white;">
+      <ion-card-subtitle style="color: rgb(114, 255, 236);">
         {{item.value.itemCategory}}
       </ion-card-subtitle>
 
       <ion-item>
-        <ion-icon *ngIf="item.value.itemPriority === 'Alta'" color="danger" size="small" name="ellipse"></ion-icon>
-        <ion-icon *ngIf="item.value.itemPriority === 'Baja'" color="success" size="small" name="ellipse"></ion-icon>
-        <ion-icon *ngIf="item.value.itemPriority === 'Media'" color="warning" size="small" name="ellipse"></ion-icon>
-        <ion-label> {{ item.value.itemName}}</ion-label>
+        <ion-icon *ngIf="item.value.itemPriority === 'Alta'" color="danger" size="small" name="ellipse" style="margin-right: 10px;"></ion-icon>
+        <ion-icon *ngIf="item.value.itemPriority === 'Baja'" color="success" size="small" name="ellipse" style="margin-right: 10px;"></ion-icon>
+        <ion-icon *ngIf="item.value.itemPriority === 'Media'" color="warning" size="small" name="ellipse" style="margin-right: 10px;"></ion-icon>
+        <ion-label style="color: #ffffff; font-weight: bold; font-size: xx-large;">    {{ item.value.itemName}}</ion-label>
       </ion-item>
 
     </ion-card-header>
 
     <ion-card-content>
-      <ion-label>Fecha: {{item.value.itemDueDate | date:'fullDate'}}</ion-label>
+      <ion-label style="font-weight: bold;">Fecha: {{item.value.itemDueDate | date:'fullDate'}}</ion-label>
     </ion-card-content>
 
     <ion-row>
@@ -37,12 +37,12 @@
 
       <ion-item button (click)="Actualizar(item)">
         <ion-icon name="create-outline"></ion-icon>
-        <p>Actualizar</p>
+        <p style="color: rgb(71, 83, 255); font-weight: bold;">Actualizar</p>
       </ion-item>
 
-      <ion-item button (click)="Eliminar(item.key)">
+      <ion-item button (click)="Eliminar(item.key)" >
         <ion-icon name="trash-outline"></ion-icon>
-        <p>Cancelar</p>
+        <p style="color: red; font-weight: bold;">Cancelar</p>
       </ion-item>
     </ion-row>
 
